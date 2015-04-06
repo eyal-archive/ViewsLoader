@@ -2,7 +2,7 @@
 {
 	var data = [];
 	
-	$(window).on('resizeEnd', function()
+	$(window).on("resizeEnd", function()
 	{
 		$(data).each(function()
 		{
@@ -71,7 +71,7 @@
 
 			this.resizeTimeout = setTimeout(function()
 			{
-				$(self).trigger('resizeEnd');
+				$(self).trigger("resizeEnd");
 			}, 500);
 		});
 	});

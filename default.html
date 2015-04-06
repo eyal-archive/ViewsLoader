@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+	    <meta charset="utf-8"/>
+	    <script src="scripts/jquery-2.1.3.js"></script>
+		<script src="scripts/jquery.ajax-view-loader.js"></script>
+        <title>ViewsLoader Demo!</title>
+    </head>
+    <body>
+		<div id="content"></div>
+		<script type="text/javascript">
+		/* <![CDATA[ */
+			(function($)
+			{
+				var viewTable = [
+					{ minWidth: "0", url: "_small.html" },
+					{ minWidth: "400", url: "_medium.html" },
+					{ minWidth: "800", url: "_normal.html" }
+				];
+
+				$("#content").loadView(viewTable);
+		
+				$(function() {
+					$(window).resize();
+				});
+
+			})(jQuery);
+		/* ]]> */
+		</script>
+    </body>
+</html>
