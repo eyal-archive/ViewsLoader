@@ -2,6 +2,8 @@
 {
 	var data = [];
 	
+	var __toString = Object.prototype.toString;
+	
 	$(window).on("resizeEnd", function()
 	{
 		$(data).each(function()
@@ -62,7 +64,10 @@
 		
 			if (this.ajaxUrl === ajaxUrl)
 			{
-				this.callback();
+				if (callback && (typeof callback === "function" || __toString.call(callback) === "[object Function]"))
+				{
+					this.callback();
+				}
 
 				return;
 			}
