@@ -1,7 +1,7 @@
 ViewsLoader
-===========
+========
 
-A tiny jQuery plugin to load views (via AJAX) based on the current window's width of the client.
+A proof of concept for of a jQuery plugin that loads views (via AJAX) based on the current window's width of the client.
 
 Usage:
 
