@@ -1,4 +1,6 @@
-﻿(function($)
+﻿/* global jQuery */
+
+(function($)
 {
 	var data = [];
 	
@@ -64,7 +66,7 @@
 		
 			if (this.ajaxUrl === ajaxUrl)
 			{
-				if (callback && (typeof callback === "function" || __toString.call(callback) === "[object Function]"))
+				if (this.callback && (typeof this.callback === "function" || __toString.call(this.callback) === "[object Function]"))
 				{
 					this.callback();
 				}
